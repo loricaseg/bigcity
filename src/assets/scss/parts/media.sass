@@ -1,0 +1,429 @@
+@media screen and (max-width: 980px)
+	body
+		padding-top: 140px!important
+	section
+		margin-bottom: 50px
+	.container
+		padding: 0 20px
+	.title
+		margin-bottom: 30px
+		h2
+			font-size: 28px
+	.menu__top, .menu__main, .menu__contacts__address
+		display: none
+	.menu
+		max-height: 100vh
+
+		background: #fff
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 23
+		padding-top: 20px
+		margin-bottom: 0
+		.mob
+			display: block
+		&__logo
+			width: 90px
+			height: 90px
+		.menu__after
+			margin-bottom: 30px
+			.container
+				gap: 30px
+		.menu__bottom
+			flex-direction: column-reverse
+			margin-left: auto
+			max-width: 300px
+		.search
+			background: #fff
+			padding: 10px 20px
+			padding-bottom: 40px
+			height: auto
+			width: 100%
+			position: absolute
+			left: 0
+			border: none
+			top: 110px
+			display: none
+			&::after
+				content: ''
+				position: absolute
+				bottom: 30px
+				width: 100%
+				height: 1px
+				width: calc(100% - 40px)
+				left: 50%
+				transform: translateX(-50%)
+				background: #000
+			input
+				width: 90%
+		.social
+			svg
+				width: 30px
+				height: 30px
+	.menu__contacts__links
+		flex-wrap: wrap
+		max-width: 300px
+		justify-content: space-between
+		gap: 20px 25px
+		.btn-border
+			display: none
+		.tel
+			width: 100%
+			order: 2
+
+	.photoreports
+		padding: 50px 0
+		.star
+			width: 100%
+			left: auto
+			right: 0
+			top: 0px
+	.photoreports__wrapper
+		gap: 20px
+		flex-direction: column
+	.photoreports__item
+		height: 220px
+		flex: none!important
+	.photoreports__left
+		flex-direction: column
+	.photoreports__right
+		width: 100%
+		height: 220px
+		.photoreports__item
+			width: 100%
+	.btn-border
+		width: auto
+		padding: 10px 20px
+		font-size: 16px
+		gap: 10px
+		svg
+			width: 24px
+			height: 24px
+	.swiper-container-header .swiper-slide
+		width: 335px
+		img
+			height: 240px
+			width: 335px
+			mask-image: url(../files/mask2.svg)
+	.header__title
+		font-size: 14px
+	.header__bottom
+		width: 280px
+		right: auto
+		left: 50px
+		gap: 10px
+		bottom: 0
+	.header__price
+		width: auto
+		padding: 0 20px
+		height: 40px
+		font-size: 14px
+	.swiper-container-header
+		overflow: hidden
+	.artists
+		.container
+			gap: 50px
+			flex-direction: column
+	.artists__left
+		display: flex
+		justify-content: center
+		gap: 50px 30px
+		flex-wrap: wrap
+		img
+			width: 150px
+			height: 150px
+	.artists__item
+		flex: 0 0 150px
+	.artists__right
+		img
+			width: 100%
+	.banner__text
+		padding-left: 0
+	.banner__wrapper
+		padding: 48px 29px
+		text-align: center
+		background-position: right
+		position: relative
+		&::after
+			content: ""
+			position: absolute
+			background: linear-gradient(90deg, rgba(26, 12, 148, 0.80) 0%, rgba(65, 4, 52, 0.80) 71.63%, rgba(0, 0, 0, 0.00) 100%)
+			border-radius: 20px
+			z-index: 0
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	.banner
+		&__title
+			font-size: 26px
+			font-style: normal
+			font-weight: 500
+			line-height: 30px
+			margin-bottom: 0
+		p
+			margin: 25px 0
+			font-size: 20px
+			font-style: normal
+			font-weight: 400
+			line-height: 18px
+	.banner__text
+		position: relative
+		z-index: 1
+	.photoreports .btn-border
+		width: fit-content
+	.reviews
+		padding: 60px 0
+		background-position-x: left
+		.swiper-slide
+			height: auto
+
+	.reviews-nav
+		display: none
+	.reviews__text
+		max-height: 422px
+	.faq__show
+		font-size: 18px
+		gap: 10px
+	.info
+		.container
+			gap: 50px
+			flex-direction: column
+	.info__left
+		width: 100%
+	.info__right
+		width: 100%
+		img
+			max-width: 550px
+			margin: 0 auto
+			display: flex
+	.footer
+		.container
+			flex-direction: column
+		.footer__menu
+			grid-template-columns: repeat(1, 1fr)
+			grid-gap: 40px
+
+	.footer__col:nth-child(2)
+		order: 1
+	.footer__col:nth-child(3)
+		margin-left: 0
+		margin-top: 20px
+		order: 2
+	.footer__col:nth-child(1)
+		align-items: center
+		text-align: center
+		display: flex
+		flex-direction: column
+		order: 3
+	.footer__politics
+		margin-top: 20px
+		flex-direction: column
+		display: flex
+		grid-gap: 20px
+		justify-content: center
+	.footer__qr
+		justify-content: center
+	.mobile-menu
+		padding: 0 20px
+		.gonorar
+			width: 100%
+			margin-left: 0
+			max-width: 350px
+			margin-bottom: 40px
+		.menu__main__list
+			align-items: flex-start
+			flex-direction: column
+			max-width: 350px
+			a
+				color: #000!important
+		.menu__main__list
+
+			& > li
+				height: auto
+				margin-bottom: 40px
+				& > a
+					height: auto
+					width: fit-content
+					padding: 0
+					&::after
+						right: -25px
+						transform: translateY(-50%) rotate(0deg)
+						background: url(../files/arr3.svg) no-repeat center
+		.menu__top
+			display: flex
+			flex-direction: column
+			gap: 30px
+			max-width: 350px
+			margin-bottom: 0
+			border: none
+			padding-bottom: 30px
+			a
+				font-size: 14px
+		.btn-border
+			color: $blue
+			border: 1px solid $blue
+			margin-bottom: 30px
+			max-width: 350px
+			&:hover
+				color: #fff
+		.menu__main__list > li.active, .menu__main__list > li:hover
+			background: none
+		.menu__main__list > li.active > a::after
+			transform: translateY(-45%) rotate(180deg)
+		.menu__main__list li ul
+			background: none
+			position: relative
+			bottom: auto
+			top: auto
+			padding: 20px
+			padding-bottom: 0
+	.menu.active
+		overflow-y: auto
+	.search.active
+		display: flex
+	.main-news__wrapper
+		grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) )
+		grid-gap: 50px 20px
+	.band
+		h1
+			font-size: 24px
+	.band__wrapper
+		flex-direction: column
+	.band__left
+		width: 100%
+		.swiper-slide
+			height: 335px
+	.band__right
+		width: 100%
+	.band__info
+		padding: 20px
+	.band__contacts
+		padding: 0
+	.band__right .btn
+		margin-left: 0
+	.band__info__row
+		grid-template-columns: 120px 1fr
+		span
+			font-size: 14px
+	.band__prefs
+		display: grid
+		grid-template-columns: repeat( auto-fit, minmax(157px, 1fr) )
+		grid-gap: 50px 20px
+	.band__prefs p
+		font-size: 16px
+	.band__vids
+		margin-bottom: 50px
+		padding: 30px
+	.band__vids__img
+		width: 100%
+		height: 200px
+	.band
+		.reviews__text
+			max-height: 100%
+	.band__feedback
+		padding: 30px
+		&__title
+			font-size: 22px
+	.band__feedback__row
+		flex-direction: column
+		gap: 40px
+		align-items: flex-start
+	.band__feedback__tel a
+		font-size: 16px
+	.band__feedback__socials
+		align-items: center
+		gap: 30px
+		margin: 0 auto
+		justify-content: center
+	.band__feedback__col
+		width: 100%
+		.btn
+			width: 100%
+	.title
+		flex-wrap: wrap
+@media screen and (min-width: 600px) and (max-width: 980px)
+	.band__feedback__socials
+		justify-content: flex-start
+	.band__left .swiper-slide
+		height: 550px
+	.footer
+		.container
+			flex-direction: row
+			flex-wrap: wrap
+		.footer__menu
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap: 40px 20px
+	.photoreports__left
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 20px
+	div.photoreports__item
+		grid-column-start: 1
+		grid-column-end: 3
+	.photoreports__right
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 50%
+		margin-left: auto
+	.photoreports__wrapper
+		position: relative
+@media screen and (min-width: 981px) and (max-width: 1280px)
+	.container
+		width: 100%
+		max-width: 100%
+		padding: 0 20px
+	.menu .menu__main__list li > a
+		font-size: 14px
+	.menu__top
+		gap: 0
+		justify-content: space-between
+	.menu .search
+		width: 200px
+	.menu__after .container
+		gap: 20px
+	.menu__main
+		.btn
+			display: none
+
+	.artists__right
+		text-align: center
+		width: 100%
+		width: 400px
+		margin-left: auto
+	.artists__item
+		width: 150px
+	.artists__left
+		display: flex
+		flex-wrap: wrap
+		gap: 20px
+	.artists .container
+		gap: 20px
+	.photoreports__left .photoreports__item
+		flex: 0 0 48%!important
+	.footer__menu
+		grid-gap: 20px
+	.footer .container
+		flex-wrap: wrap
+	.footer__col:nth-child(3)
+		margin-left: 0
+	.band__vids__img
+		width: 100%
+		height: 220px
+	.band__vids__row
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 20px
+		width: 100%
+	.band__vids__wrapper
+		width: 100%
+	.band__feedback__row
+
+		gap: 20px
+	.band__feedback
+		padding: 50px 20px
+	.band__feedback__socials
+		gap: 20px

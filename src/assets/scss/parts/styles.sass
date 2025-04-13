@@ -1,0 +1,968 @@
+.menu
+	padding: 0
+	margin-top: 0
+	z-index: 2
+	margin-bottom: 50px
+	.mob
+		display: none
+	.mobile-menu
+		display: none
+	&__main
+		height: 70px
+		background: $blue
+		display: flex
+		align-items: center
+		justify-content: center
+	.container
+		overflow: visible
+		display: flex
+		align-items: center
+	.btn
+		margin-left: auto
+		flex-shrink: 0
+		margin-left: 20px
+	.menu__main__list
+		display: flex
+		align-items: center
+		width: 100%
+		justify-content: space-between
+		& > li
+
+			white-space: nowrap
+			height: 70px
+			cursor: pointer
+			position: relative
+
+			&:hover
+				background: #3179DC
+			& > a
+				height: 70px
+				padding: 0 20px
+				padding-right: 40px
+				display: flex
+				position: relative
+				align-items: center
+				&::after
+					content: ''
+					position: absolute
+					right: 10px
+					top: 48%
+					transform: translateY(-45%) rotate(-180deg)
+					background: url('../files/arr.svg') no-repeat center
+					background-size: contain
+					width: 18px
+					height: 18px
+					@include trans
+		li
+			position: relative
+			& > a
+				color: #FFF
+				leading-trim: both
+				text-edge: cap
+				font-family: Rubik
+				font-size: 16px
+				font-style: normal
+				font-weight: 500
+				line-height: 150%
+				text-transform: uppercase
+			ul
+				width: 350px
+				position: absolute
+				top: 70px
+				left: 0
+				display: none
+				padding: 20px 20px
+				flex-direction: column
+				align-items: flex-start
+				border-radius: 0px 10px 10px 10px
+				background: #3179DC
+				li
+					padding: 0
+					a
+						font-size: 18px
+						line-height: 40px
+						font-style: normal
+						font-weight: 400
+						text-transform: none
+						&:hover
+							color: $green
+		& > li.active
+			background: #3179DC
+			ul
+				display: flex
+			& > a
+				&::after
+					transform: translateY(-45%) rotate(0deg)
+	&__logo
+		width: 150px
+		flex-shrink: 0
+		height: 150px
+		img
+			width: 100%
+			height: 100%
+	&__after
+		margin-bottom: 20px
+		.container
+			gap: 60px
+			align-items: center
+	&__right
+		width: 100%
+	&__top
+		padding: 10px 0
+		display: flex
+		gap: 140px
+		margin-bottom: 50px
+		width: 100%
+		border-bottom: 1px solid #DBDBDB
+		a
+			font-size: 14px
+			font-style: normal
+			font-weight: 400
+			line-height: 150%
+			text-transform: uppercase
+			&:hover
+				color: rgba(2, 79, 186, 1)
+	.search
+		width: 370px
+		height: 46px
+		display: flex
+		border-bottom: 1px solid #000
+		align-items: center
+		flex-shrink: 0
+		.search__button
+			cursor: pointer
+			margin-left: auto
+			&:hover
+				svg
+					path
+						fill: $blue
+		input
+			height: 100%
+			background: none
+			border: none
+			color: #B5B5B5
+			font-weight: 300
+			font-size: 16px
+	&__bottom
+		gap: 48px
+	&__contacts
+		width: 100%
+
+		&__links
+			align-items: center
+			justify-content: space-between
+		&__address
+			color: rgba(125, 125, 125, 1)
+			font-size: 14px
+			font-style: normal
+			font-weight: 300
+			line-height: 150%
+		.tel
+			font-size: 24px
+			font-style: normal
+			font-weight: 500
+			line-height: 150%
+			text-transform: uppercase
+		.btn-border
+			display: flex
+			width: 220px
+			height: 44px
+			padding: 10px
+			justify-content: center
+			align-items: center
+			gap: 10px
+			font-weight: 300
+			flex-shrink: 0
+			border-radius: 5px
+			border: 1px solid #024FBA
+			color: #024FBA
+			margin-bottom: 0!important
+			&:hover
+				background: $blue
+				color: #fff
+				svg
+					path
+						fill: #fff!important
+		.social
+			&:hover
+				svg
+					path
+						fill: $blue
+.footer
+	background: #000
+	padding: 50px 0
+	color: #fff
+	a
+		color: #fff
+		&:hover
+			color: $blue
+	&__col
+		height: auto
+		display: flex
+		flex-direction: column
+		&:nth-child(1)
+			max-width: 300px
+			p
+				color: #999
+				font-size: 14px
+				&:first-of-type
+					margin-bottom: 20px
+		&:nth-child(3)
+			max-width: 300px
+			margin-left: auto
+			p
+				color: #999
+	.logo
+		width: 190px
+		height: 190px
+		margin-bottom: 54px
+		img
+			width: 100%
+			height: 100%
+	.container
+		gap: 20px
+	&__menu
+		margin-bottom: 20px
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 40px 60px
+		a
+			font-size: 18px
+			font-style: normal
+			font-weight: 400
+	&__politics
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		gap: 60px
+		margin-top: auto
+		a
+			color: #999
+			font-size: 16px
+	&__contacts
+		display: flex
+		gap: 25px
+		margin-bottom: 20px
+		align-items: center
+		.tel
+			font-size: 22px
+			font-style: normal
+			font-weight: 500
+			line-height: 150%
+			text-transform: uppercase
+		.social
+			&:hover
+				svg
+					path
+						fill: $blue
+	.btn-border
+		display: flex
+		width: 220px
+		height: 44px
+		padding: 10px
+		justify-content: center
+		align-items: center
+		gap: 10px
+		font-weight: 300
+		flex-shrink: 0
+		border-radius: 5px
+		margin-bottom: 20px
+		border: 1px solid #fff
+		color: #fff
+		&:hover
+			border: 1px solid $blue
+			background: $blue
+			color: #fff
+			svg
+				path
+					fill: #fff!important
+	.mail
+		margin: 30px 0
+		color: #fff
+		display: flex
+		align-items: center
+		gap: 10px
+		&:hover
+			svg
+				path
+					stroke: $blue
+	.descr-qr
+		font-size: 14px
+		margin-bottom: 15px
+	&__qr
+		display: flex
+		gap: 20px
+		img
+			width: 100px
+			height: 100px
+			object-fit: contain
+.swiper-container-header
+	.swiper-slide
+		position: relative
+		img
+			height: 340px
+			width: 100%
+			object-fit: cover
+			mask-image: url("../files/mask.svg")
+		&:hover
+			.header__price
+				color: #000
+.header
+	margin-bottom: 50px
+	&__bottom
+		position: absolute
+		right: 0
+		bottom: 10px
+		align-items: center
+		display: flex
+		background: #fff
+		border-radius: 20px 0 0 0
+		padding-top: 10px
+		padding-left: 10px
+		width: 450px
+		justify-content: space-between
+	&__title
+		font-size: 22px
+		font-style: normal
+		font-weight: 500
+		line-height: 24px
+		text-transform: uppercase
+	&__price
+		border-radius: 10px
+		background: #B2FF35
+		display: flex
+		width: 180px
+		height: 50px
+		padding: 0px 20px
+		justify-content: center
+		align-items: center
+		gap: 5px
+		flex-shrink: 0
+		font-size: 22px
+		font-style: normal
+		font-weight: 500
+		span
+			font-size: 12px
+			font-style: normal
+			font-weight: 400
+	&__pagination
+		margin-top: 30px
+		text-align: center
+.swiper-pagination-bullet
+	width: 16px
+	height: 16px
+	background: #D1D0CF
+	opacity: 1
+.swiper-pagination-bullet-active
+	background: $blue
+.artists
+	margin-bottom: 50px
+	.container
+		display: flex
+		gap: 60px
+	&__left
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 50px 60px
+	&__item
+		text-align: center
+		img
+			margin-bottom: 10px
+			border-radius: 20px
+			width: 150px
+			height: 150px
+		span
+			font-size: 15px
+			font-style: normal
+			font-weight: 400
+.banner
+	margin-bottom: 50px
+	&__wrapper
+		background: url('../img/banner.png') no-repeat center
+		height: 226px
+		border-radius: 20px
+		color: #fff
+		display: flex
+		align-items: center
+	&__text
+		display: flex
+		justify-content: center
+		padding-left: 118px
+		align-items: center
+		width: fit-content
+		flex-direction: column
+	&__title
+		font-size: 26px
+		font-style: normal
+		font-weight: 500
+		line-height: 18px
+		margin-bottom: 25px
+	p
+		margin-bottom: 25px
+		font-size: 20px
+		font-style: normal
+		font-weight: 400
+		line-height: 18px
+.photoreports
+	background: #1F467C
+	padding: 100px 0
+	.star
+		position: absolute
+		left: -150px
+		top: 0
+		pointer-events: none
+		z-index: 0
+
+	.container
+		overflow: visible
+	&__wrapper
+		position: relative
+		z-index: 1
+		gap: 20px
+		display: flex
+	&__item
+		height: 220px
+		display: flex
+		justify-content: center
+		flex-direction: column
+		position: relative
+		img
+			border-radius: 20px
+			object-fit: cover
+			width: 100%
+			height: 100%
+		span
+			position: absolute
+			bottom: 18px
+			left: 18px
+			right: 18px
+			font-size: 18px
+			font-style: normal
+			font-weight: 400
+			line-height: 20px
+			border-left: 2px solid $green
+			padding-left: 10px
+			color: #fff
+	a.photoreports__item
+		&:hover
+			span
+				color: $green!important
+	&__right
+		width: 295px
+		height: 460px
+		flex-shrink: 0
+		.photoreports__item
+			height: 100%
+	&__left
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		gap: 20px
+		.photoreports__item
+			flex: 0 0 31.8%
+			&:nth-child(4)
+				flex: 0 0 45%
+			&:nth-child(5)
+				flex: 0 0 31.8%
+			&:nth-child(6)
+				flex: 0 0 18.7%
+	h2
+		font-size: 28px
+		color: #fff
+		font-style: normal
+		font-weight: 500
+		line-height: 32px
+		margin-bottom: 17px
+		text-transform: uppercase
+	.btn-border
+		border: 1px solid $green
+		color: $green
+		cursor: pointer
+		&:hover
+			background: $green
+			color: #000
+			svg
+				path
+					fill: #000!important
+.title
+	display: flex
+	gap: 30px
+	align-items: center
+	margin-bottom: 50px
+	h2
+		font-size: 28px
+		font-style: normal
+		font-weight: 500
+		line-height: 32px
+		margin: 0
+		text-transform: uppercase
+	.btn-border
+		border: 1px solid $blue
+		margin: 0
+		color: $blue
+		&:hover
+			color: #fff
+.news
+
+	img
+		width: 100%
+		border-radius: 20px
+		height: 220px
+		margin-bottom: 10px
+		object-fit: cover
+	&__date
+		color: #7D7D7D
+		font-size: 12px
+		font-style: normal
+		font-weight: 300
+		margin-bottom: 5px
+		line-height: 20px
+	&__title
+		font-size: 20px
+		font-style: normal
+		font-weight: 500
+		line-height: 22px
+		margin-bottom: 10px
+	p
+		font-size: 16px
+		font-style: normal
+		font-weight: 300
+		line-height: 22px
+.reviews
+	background: url('../files/bg2.svg') no-repeat center
+	background-size: cover
+	padding: 100px 0
+	&__top
+		margin-bottom: 50px
+		align-items: center
+	.title
+		margin: 0
+	&-nav
+		gap: 30px
+		div
+			cursor: pointer
+			&:hover
+				svg
+					circle
+						fill: $blue
+					path
+						fill: #fff
+	.swiper-slide
+		display: flex
+		flex-direction: column
+		width: 400px
+		padding: 30px
+		align-items: flex-start
+		gap: 20px
+		align-self: stretch
+		border-radius: 20px
+		border-bottom: 3px solid rgba(2, 79, 186, 0.30)
+		background: #FFF
+
+		display: flex
+		flex-direction: column
+	&__img
+		width: 120px
+		margin-bottom: 20px
+		height: 120px
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	&__name
+		font-size: 20px
+		font-style: normal
+		font-weight: 500
+	p
+		line-height: 150%
+
+		font-weight: 300
+		margin-bottom: 20px
+		&:not(:first-of-type)
+			display: none
+	&__more
+		display: flex
+		align-items: center
+		gap: 10px
+		cursor: pointer
+		margin-top: auto
+		svg
+			@include trans
+		span
+			border-bottom: 1px dashed #000
+		&:hover
+			color: #000
+			span
+				border-bottom: 1px dashed #fff
+	&__more.active
+		svg
+			transform: rotate(-180deg)
+	// &__text
+	// 	max-height: 270px
+	// 	overflow-y: auto
+.info
+	.container
+		display: flex
+		gap: 16px
+	&__right
+		width: 425px
+		flex-shrink: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	&__left
+		h3
+			font-size: 22px
+			font-style: normal
+			font-weight: 500
+			line-height: 22px
+			margin-bottom: 30px
+		p, li
+			font-size: 16px
+			font-style: normal
+			font-weight: 300
+			line-height: 24px
+			margin-bottom: 30px
+		li
+			position: relative
+			font-weight: 400
+			padding-left: 30px
+			&::after
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				background: url('../files/arr2.svg') no-repeat center
+				background-size: contain
+				width: 20px
+				height: 20px
+				flex-shrink: 0
+.faq
+	&__item
+		border-radius: 20px
+		padding: 30px
+		cursor: pointer
+		background: #F6F8FA
+		&:hover
+			background: #EDF4FF
+		&:not(:last-child)
+			margin-bottom: 20px
+	&__show
+		display: flex
+		align-items: center
+		font-size: 22px
+		font-style: normal
+		font-weight: 500
+		line-height: 22px
+		svg
+			margin-left: auto
+			@include trans
+			flex-shrink: 0
+	&__hide
+		margin-top: 20px
+		display: none
+		p
+			font-size: 16px
+			font-style: normal
+			font-weight: 300
+			line-height: 24px
+			&:not(:last-child)
+				margin-bottom: 20px
+	&__item.active
+		background: #EDF4FF
+		.faq__show
+			svg
+				transform: rotate(-180deg)
+.main-news
+	.title
+		margin-bottom: 30px
+	&__wrapper
+		padding-bottom: 50px
+		border-bottom: 1px solid #DBDBDB
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 50px 20px
+		img
+			height: 220px
+	.pagination
+		margin-top: 24px
+.breadcrumbs
+	margin-bottom: 30px
+	ul
+		display: flex
+		flex-wrap: wrap
+		gap: 10px
+		align-items: center
+	li
+		font-size: 14px
+		font-style: normal
+		font-weight: 300
+		line-height: 20px
+		color: #7D7D7D
+	a
+		color: #000
+		&:hover
+			color: $blue
+
+.pagination
+	display: flex
+	align-items: center
+	gap: 30px
+	justify-content: center
+	.active
+		width: 40px
+		height: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		background: #000
+		color: #fff
+		border-radius: 100px
+		a
+			color: #fff
+	.prev
+		svg
+			transform: scale(-1)
+.band
+	h1
+		margin-bottom: 30px
+	&__similar
+		.title
+			margin-bottom: 30px
+		img
+			width: 100%
+			height: 220px
+			border-radius: 20px
+			margin-bottom: 10px
+			object-fit: cover
+		p
+			font-size: 18px
+			font-style: normal
+			font-weight: 500
+	&__wrapper
+		display: flex
+		margin-bottom: 50px
+		gap: 20px
+	&__left
+
+		overflow: hidden
+		width: 50%
+		.swiper-slide
+			height: 610px
+		img
+			width: 100%
+			object-fit: cover
+			height: 100%
+			border-radius: 20px
+	&__info
+		display: flex
+		padding: 30px
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		gap: 30px
+		align-self: stretch
+		border-radius: 30px
+		background: #F8F8F8
+		width: 100%
+		margin-bottom: 50px
+		&__row
+			grid-gap: 10px
+			display: grid
+			grid-template-columns: 200px 200px
+			p
+				font-weight: 500
+			span
+				font-weight: 300
+	&__right
+		width: 50%
+		.btn
+			margin-top: 30px
+			margin-left: 30px
+			width: 270px
+	&__text
+		font-weight: 300
+		margin-bottom: 40px
+		padding-left: 30px
+	&__contacts
+		padding-left: 30px
+		p
+			font-size: 20px
+			font-style: normal
+			font-weight: 400
+			margin-bottom: 20px
+			text-transform: uppercase
+		a
+			font-size: 18px
+			font-style: normal
+			font-weight: 500
+			display: flex
+			align-items: center
+			gap: 10px
+			margin-bottom: 20px
+	&__prefs
+		margin-bottom: 100px
+		display: flex
+		justify-content: space-between
+		&__item
+			max-width: 270px
+			width: 100%
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				bottom: -30px
+				width: 85px
+				height: 2px
+				background: rgba(2, 79, 186, 0.10)
+		svg
+			margin-bottom: 10px
+		p
+			font-size: 18px
+			font-style: normal
+			font-weight: 400
+	&__vids
+		margin-bottom: 100px
+		border-radius: 20px
+		background: linear-gradient(246deg, rgba(17, 133, 237, 0.00) 37.41%, rgba(17, 133, 237, 0.40) 99.33%), #1F467C
+		color: #fff
+		padding: 30px 40px
+		.title
+			margin-bottom: 40px
+		&__row
+			display: flex
+			gap: 40px
+			flex-wrap: wrap
+		h2
+			color: #fff
+			margin-bottom: 0px
+		p
+			font-size: 20px
+			font-style: normal
+			font-weight: 500
+			color: #fff
+		&__img
+			position: relative
+			width: 360px
+			height: 260px
+			margin-bottom: 20px
+			&::after
+				content: ''
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				background: url('../files/play.svg') no-repeat center
+				width: 70px
+				height: 70px
+				@include trans
+			img
+				width: 100%
+				object-fit: cover
+				height: 100%
+				border-radius: 20px
+		&__item
+			&:hover
+				.band__vids__img
+					&::after
+						opacity: 0
+	&__text
+		padding-left: 0
+		p
+			font-size: 16px
+			font-style: normal
+			font-weight: 300
+			line-height: 24px
+			margin-bottom: 30px
+		p
+			&:not(:first-child)
+				display: none
+	.header__pagination
+		position: relative
+		margin-top: 20px
+		bottom: auto
+	&__feedback
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		padding: 50px
+		align-items: flex-start
+		gap: 20px
+		border-radius: 20px
+		background: #EDF4FF
+		margin-bottom: 100px
+		&__title
+			font-size: 26px
+			font-style: normal
+			font-weight: 300
+			text-align: center
+			margin: 0 auto
+			margin-bottom: 30px
+		&__row
+			display: flex
+			justify-content: space-between
+			width: 100%
+			align-items: center
+		&__tel
+			display: flex
+			gap: 10px
+			a
+				font-size: 18px
+				margin-bottom: 10px
+				font-weight: 500
+				span
+					font-weight: 300
+		&__col
+			display: flex
+			a
+				display: flex
+				gap: 10px
+				align-items: center
+		&__socials
+			gap: 50px
+			a
+				&:hover
+					svg
+						path
+							fill: $blue
+.main-reviews
+	padding: 0
+	background: none
+	.reviews-item
+		border-radius: 20px
+		border: 1px solid #D9D9D9
+		background: #FFF
+		padding: 30px
+	.reviews__img
+		img
+			height: 100%
+			width: 100%
+	.pagination
+		margin-top: 24px
+	.title
+		margin-bottom: 30px
+	.reviews__name
+		margin-bottom: 20px
+	.main-news__wrapper
+		grid-gap: 20px
+.main-news__grid
+	&__row
+		display: grid
+		margin-top: 10px
+		grid-template-columns: repeat(2, 1fr)
+		span
+			font-size: 16px
+			font-style: normal
+			font-weight: 300
+			color: #000
+		p
+			font-size: 16px
+			color: #000
+			font-style: normal
+			font-weight: 500
+		&:last-of-type
+			p
+				text-decoration: underline
+.news-photos
+	.news__title
+		margin-bottom: 10px
