@@ -1,0 +1,72 @@
+@@include('partials/head.html', {
+"title": "Главная"
+})
+
+<div class="breadcrumbs">
+	<div class="container">
+		<ul>
+			<li><a href="">Главная</a></li>
+			<li>/</li>
+			<li>Результат поиска</li>
+		</ul>
+	</div>
+</div>
+
+<section class="search-result">
+	<div class="container">
+		<h2>результат поиска</h2>
+		<form class="search-result__plate">
+			<span>Новый поиск</span>
+			<div class="search-result__label">
+				<input type="text" placeholder="Пугачева">
+				<button class="btn">Искать</button>
+			</div>
+		</form>
+
+		<div class="search-result__wrapper">
+			<div class="search-result__title">5 результов поиска "пугачева":</div>
+			<div class="search-result__name">Артисты:</div>
+			<ul class="search-result__item artist">
+				<li>
+					<a href="">
+						<div class="num">1</div>
+						<img src="assets/img/ar.png" alt="">
+						<span>Алла Пугачева</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="search-result__name">Статьи:</div>
+			<ul class="search-result__item articles">
+				<li>
+					<a href="">
+						<div class="num">2</div>
+						<span>Алла Пугачева</span>
+						<p>
+							Алла Пугачева снялась в клипе Алишера на песню «Скажи мне, Алла». В клипе Пугачева предстала в
+							образе
+							рокерши, что довольно смело для певицы. Скажи мне, Алла Алишер – модельер и дизайнер, презентовал
+							клип
+							на песню, где Алла Пугачева исполнила главную роль и предстала в образе рокерши. Пугачева настолько
+							сильно исполнила песню, что у Алишера потекли […]
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="num">3</div>
+						<span>Киркоров выложил в своих соцсетях новую песню Пугачевой</span>
+						<p>
+							Творение Пугачевой вызвало восторг у Филиппа Киркорова. Под выложенным треком артист написал:
+							«Весна
+							всегда в твоей душе, в твоем сердце, в твоем творчестве. Спасибо за такую новую потрясающую песню в
+							канун твоего юбилея».
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+@@include('partials/footer.html', {})

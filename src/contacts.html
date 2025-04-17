@@ -1,0 +1,116 @@
+@@include('partials/head.html', {
+"title": "Главная"
+})
+
+<div class="breadcrumbs">
+	<div class="container">
+		<ul>
+			<li><a href="">Главная</a></li>
+			<li>/</li>
+			<li>Контакты</li>
+		</ul>
+	</div>
+</div>
+
+<section class="contacts">
+	<div class="container">
+		<h2>Контакты</h2>
+		<div class="contacts__info">
+			<div class="contacts__name">Концертное агентство «Большой Город»</div>
+			<div class="contacts__grid">
+				<div class="contacts__row">
+					<span>Телефоны:</span>
+					<div class="contacts__link">
+						<a href="tel:+7 (495) 142 60 10">+7 (495) 142 60 10</a>
+					</div>
+				</div>
+				<div class="contacts__row">
+					<span>Филиал в Казахстане (Астана):</span>
+					<div class="contacts__link">
+						<a href="tel:+7 (495) 142 60 10">+7 (495) 142 60 10</a>
+					</div>
+				</div>
+				<div class="contacts__row">
+					<span>E-mail:</span>
+					<div class="contacts__link">
+						<p>
+							<a href="tel:info@bigcitystar.ru">
+								info@bigcitystar.ru
+							</a>
+							<span>Сотрудничество</span>
+						</p>
+						<p>
+							<a href="mailto:inbox@bigcitystar.ru">
+								inbox@bigcitystar.ru
+							</a>
+							<span> Заказ и подбор артистов, Организация мероприятий</span>
+						</p>
+					</div>
+				</div>
+				<div class="contacts__row">
+					<span>График и время работы:</span>
+					<div class="contacts__link">
+						<p>с 10:00 до 20:00, без выходных</p>
+					</div>
+				</div>
+				<div class="contacts__row">
+					<span>Адрес:</span>
+					<div class="contacts__link">
+						<p>г. Москва, ул. Горбунова, 2с3</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contacts__map">
+			<iframe
+				src="https://yandex.ru/map-widget/v1/?um=constructor%3A9e618d5b8f7d6f360f652f302b48b702572d4ba7b74ede188402dff71ad06fc8&amp;source=constructor"
+				width="100%" height="500" frameborder="0"></iframe>
+		</div>
+		<form action="" class="contacts__form">
+			<div class="contacts__form__title">
+				Задать вопрос
+			</div>
+			<div class="contacts__form__grid">
+				<div class="contacts__form__left">
+					<div class="input">
+						<span>Ваше имя *</span>
+						<label>
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20.9987 8C20.9987 9.32608 20.4719 10.5979 19.5342 11.5355C18.5965 12.4732 17.3247 13 15.9987 13C14.6726 13 13.4008 12.4732 12.4631 11.5355C11.5255 10.5979 10.9987 9.32608 10.9987 8C10.9987 6.67392 11.5255 5.40215 12.4631 4.46447C13.4008 3.52678 14.6726 3 15.9987 3C17.3247 3 18.5965 3.52678 19.5342 4.46447C20.4719 5.40215 20.9987 6.67392 20.9987 8ZM6 26.824C6.04285 24.2005 7.11512 21.6989 8.98557 19.8587C10.856 18.0186 13.3748 16.9873 15.9987 16.9873C18.6225 16.9873 21.1413 18.0186 23.0118 19.8587C24.8822 21.6989 25.9545 24.2005 25.9973 26.824C22.861 28.2637 19.4497 29.0061 15.9987 29C12.4307 29 9.044 28.2213 6 26.824Z"
+									stroke="#024FBA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<input type="text" placeholder="Введите имя">
+						</label>
+					</div>
+					<div class="input">
+						<span>Ваш адрес e-mail *</span>
+						<label>
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M25.9139 5.41992H6.08724C5.20318 5.41992 4.35534 5.77111 3.73022 6.39623C3.1051 7.02135 2.75391 7.8692 2.75391 8.75326V23.2466C2.75391 24.1306 3.1051 24.9785 3.73022 25.6036C4.35534 26.2287 5.20318 26.5799 6.08724 26.5799H25.9139C26.798 26.5799 27.6458 26.2287 28.2709 25.6036C28.896 24.9785 29.2472 24.1306 29.2472 23.2466V8.75326C29.2472 7.8692 28.896 7.02135 28.2709 6.39623C27.6458 5.77111 26.798 5.41992 25.9139 5.41992ZM6.08724 6.75326H25.9139C26.4185 6.75212 26.9046 6.94303 27.2736 7.28723C27.6425 7.63143 27.8667 8.10314 27.9006 8.60659C24.6072 10.3666 21.3006 12.1133 17.9939 13.8733C17.5473 14.1549 17.0739 14.3916 16.5806 14.5799C16.1938 14.6565 15.7951 14.6498 15.4112 14.5601C15.0272 14.4704 14.6668 14.2999 14.3539 14.0599C12.4606 13.0599 10.5672 12.0466 8.68724 11.0466C7.16724 10.2466 5.62057 9.43326 4.10057 8.61992C4.13118 8.1141 4.35393 7.63909 4.72323 7.29209C5.09254 6.94509 5.58049 6.75233 6.08724 6.75326ZM27.9139 23.2466C27.9139 23.777 27.7032 24.2857 27.3281 24.6608C26.953 25.0359 26.4443 25.2466 25.9139 25.2466H6.08724C5.55681 25.2466 5.0481 25.0359 4.67303 24.6608C4.29795 24.2857 4.08724 23.777 4.08724 23.2466V10.1333C7.23391 11.7866 10.3672 13.4666 13.5139 15.1333C14.0759 15.4782 14.6812 15.7472 15.3139 15.9333C16.2398 16.084 17.1887 15.8895 17.9806 15.3866C19.9139 14.3733 21.8339 13.3466 23.7672 12.3333C25.1539 11.5866 26.5272 10.8666 27.9139 10.1333V23.2466Z"
+									fill="#024FBA" />
+							</svg>
+
+							<input type="text" placeholder="Введите e-mail">
+						</label>
+					</div>
+
+				</div>
+				<div class="contacts__form__right">
+					<div class="input">
+						<span>Ваш вопрос *</span>
+						<textarea name="" id=""></textarea>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="contacts__form__bottom">
+				<img src="assets/img/cap.png" alt="" class="captcha">
+				<input type="submit" class="btn" value="Отправить вопрос">
+			</div>
+		</form>
+	</div>
+</section>
+@@include('partials/footer.html', {})

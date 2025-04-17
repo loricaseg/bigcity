@@ -344,6 +344,70 @@
 			width: 100%
 	.title
 		flex-wrap: wrap
+	.clients
+		&__item
+			padding: 20px
+		&__grid
+			grid-template-columns: 1fr
+		&__row
+			grid-template-columns: repeat(2, 1fr)
+	.contacts__link
+		margin-top: -5px
+		p
+			align-items: flex-start
+			flex-direction: column
+	.contacts__row
+		gap: 20px
+	.contacts__map
+		iframe
+			height: 335px
+	.contacts__form
+		padding: 50px 20px 30px 20px
+	.contacts__form__grid
+		grid-template-columns: 1fr
+	.contacts__form__left
+		width: 100%
+	.contacts
+		.captcha
+			width: 100%
+			margin: 0
+		.btn
+			margin-top: 30px
+	.contacts__form__bottom
+		display: flex
+		flex-direction: column
+		gap: 30px
+		margin-top: 30px
+		.btn
+			margin-top: 0
+			width: 100%
+			max-width: 450px
+			margin-left: auto
+			margin-right: auto
+	.razdely__grid
+		grid-template-columns: 1fr
+	.razdely__item img
+		width: 100%
+	.razdely__faq
+		flex-direction: column
+		padding: 30px
+		&__left, &__right
+			width: 100%
+	.artists-main
+		.artists__left
+			grid-gap: 30px
+		.razdely__faq
+			margin-top: 0
+			margin-bottom: 0
+	.header-gonorar
+		.swiper-container-header
+			display: grid
+			grid-template-columns: repeat(1, 1fr)
+			grid-gap: 50px 20px
+	.search-result__label
+		flex-direction: column
+		.btn
+			width: 100%
 @media screen and (min-width: 600px) and (max-width: 980px)
 	.band__feedback__socials
 		justify-content: flex-start
