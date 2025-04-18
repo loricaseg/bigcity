@@ -298,10 +298,17 @@
 .swiper-container-header
 	.swiper-slide
 		position: relative
+		min-height: 340px
+		display: flex
+		flex-direction: column
 		img
 			height: 340px
 			width: 100%
 			object-fit: cover
+			position: absolute
+			right: 0
+			left: 0
+			z-index: 0
 			mask-image: url("../files/mask.svg")
 		&:hover
 			.header__price
@@ -309,10 +316,14 @@
 .header
 	margin-bottom: 50px
 	&__bottom
-		position: absolute
-		right: 0
-		bottom: 10px
+		// position: absolute
+		position: relative
+		// right: 0
+		// bottom: 10px
 		align-items: center
+		margin-top: 270px
+		margin-left: auto
+		z-index: 1
 		display: flex
 		background: #fff
 		border-radius: 20px 0 0 0
@@ -330,7 +341,7 @@
 		border-radius: 10px
 		background: #B2FF35
 		display: flex
-		width: 180px
+		width: auto
 		height: 50px
 		padding: 0px 20px
 		justify-content: center
@@ -827,10 +838,22 @@
 			font-weight: 400
 	&__vids
 		margin-bottom: 100px
-		border-radius: 20px
-		background: linear-gradient(246deg, rgba(17, 133, 237, 0.00) 37.41%, rgba(17, 133, 237, 0.40) 99.33%), #1F467C
-		color: #fff
-		padding: 30px 40px
+		display: flex
+		gap: 20px
+		&__wrapper
+			border-radius: 20px
+			background: linear-gradient(246deg, rgba(17, 133, 237, 0.00) 37.41%, rgba(17, 133, 237, 0.40) 99.33%), #1F467C
+			color: #fff
+			padding: 30px 40px
+
+		&__widget
+			height: 440px
+			border-radius: 20px
+			overflow: hidden
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
 		.title
 			margin-bottom: 40px
 		&__row
@@ -866,6 +889,7 @@
 				height: 100%
 				border-radius: 20px
 		&__item
+
 			&:hover
 				.band__vids__img
 					&::after
@@ -1095,6 +1119,7 @@
 	input
 		border: none
 		font-size: 18px
+		width: 100%
 		&::placeholder
 			color: #B5B5B5
 			font-size: 18px
@@ -1282,3 +1307,74 @@
 		font-style: normal
 		font-weight: 300
 		margin-bottom: 30px
+
+.form-popup
+	display: flex
+	width: 640px
+	padding: 50px
+	flex-direction: column
+	align-items: center
+	gap: 30px
+	border-radius: 20px
+	background: #EDF4FF
+	&__title
+		margin-bottom: 20px
+		font-size: 26px
+		font-style: normal
+		font-weight: 500
+	.captcha
+		margin-left: auto
+		margin-right: auto
+		display: flex
+	&__check
+		margin-top: 30px
+		display: flex
+		font-weight: 300
+		align-items: center
+		gap: 20px
+		justify-content: center
+		margin-bottom: 30px
+		position: relative
+		cursor: pointer
+		input
+			position: absolute
+			left: -100%
+			opacity: 0
+		&::before
+			content: ''
+			width: 30px
+			height: 30px
+			flex-shrink: 0
+			background: #fff
+			border-radius: 5px
+			background-size: contain
+	&__check.active
+		&::before
+			content: ''
+			width: 30px
+			height: 30px
+			background: #fff
+			background: url('../files/check.svg') no-repeat center
+			background-size: contain
+	.btn
+		border: none
+		margin: 0 auto
+		cursor: pointer
+		&:disabled
+			pointer-events: none
+			opacity: .5
+	&__form
+		width: 100%
+	select
+		width: 100%
+		border: none
+		font-size: 18px
+		color: $text
+.popup
+	display: none
+	.is-close-btn
+		top: 20px!important
+		right: 20px!important
+		opacity: 1!important
+		color: $text!important
+		background: none!important

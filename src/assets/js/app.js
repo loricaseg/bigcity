@@ -206,3 +206,85 @@ $('.mob-search').click(function (e) {
 Fancybox.bind('[data-fancybox="video-gallery"]', {
 	// Your custom options for a specific gallery
 });
+
+Fancybox.bind('[data-fancybox]', {
+	// Your custom options for a specific gallery
+});
+
+
+$(document).ready(function () {
+	const element = document.getElementById('tel-mask');
+	const maskOptions = {
+		mask: '+{7}(000)000-00-00'
+	};
+	const mask = IMask(element, maskOptions);
+
+	const element2 = document.getElementById('date-mask');
+	IMask(element2, {
+		mask: Date,  // enable date mask
+
+		// other options are optional
+		pattern: 'Y-`m-`d',  // Pattern mask with defined blocks, default is 'd{.}`m{.}`Y'
+		// you can provide your own blocks definitions, default blocks for date mask are:
+		blocks: {
+			d: {
+				mask: IMask.MaskedRange,
+				from: 1,
+				to: 31,
+				maxLength: 2,
+			},
+			m: {
+				mask: IMask.MaskedRange,
+				from: 1,
+				to: 12,
+				maxLength: 2,
+			},
+			Y: {
+				mask: IMask.MaskedRange,
+				from: 2025,
+				to: 2030,
+			}
+		},
+
+		// define date -> str convertion
+		format: date => {
+			let day = date.getDate();
+			let month = date.getMonth() + 1;
+			const year = date.getFullYear();
+
+			if (day < 10) day = "0" + day;
+			if (month < 10) month = "0" + month;
+
+			return [year, month, day].join('-');
+		},
+
+		// define str -> date convertion
+		parse: str => {
+			const yearMonthDay = str.split('-');
+			return new Date(yearMonthDay[0], yearMonthDay[1] - 1, yearMonthDay[2]);
+		},
+
+		// optional interval options
+		min: new Date(2025, 0, 1),  // defaults to `1900-01-01`
+		max: new Date(2030, 0, 1),  // defaults to `9999-01-01`
+
+		autofix: true,  // defaults to `false`
+
+		// pattern options can be set as well
+		lazy: false,
+
+		// and other common options
+		overwrite: true  // defaults to `false`
+	})
+});
+
+$('.form-popup__check input').on('input', function () {
+	if ($(this).is(':checked')) {
+		$(this).parents('.form-popup__check').addClass('active');
+		$('.form-button').attr('disabled', false)
+	} else {
+		$(this).parents('.form-popup__check').removeClass('active');
+		$('.form-button').attr('disabled', true)
+	}
+
+})
