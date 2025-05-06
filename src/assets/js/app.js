@@ -1,6 +1,4 @@
-import * as mainFunc from "./modules/func.js";
 
-mainFunc.isWebp();
 
 $('.menu__main__list > li > a').click(function (e) {
 	e.preventDefault();
