@@ -426,7 +426,25 @@
 			padding-left: 0
 			p
 				padding-left: 0
+	.article
+		.article-mobile
+			display: block
+			h1
+				margin-bottom: 20px
+			.article__date
+				margin-bottom: 30px
+		.band__right
+			h1, .article__date
+				display: none
+				mb
+		.band__left
+			.swiper-slide
+				height: 240px
 @media screen and (min-width: 600px) and (max-width: 980px)
+	.article
+		.band__left
+			.swiper-slide
+				height: 400px
 	.band__feedback__socials
 		justify-content: flex-start
 	.band__left .swiper-slide
